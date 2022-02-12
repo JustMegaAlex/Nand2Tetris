@@ -1,0 +1,12 @@
+
+/** (a and y) or z */
+
+CHIP f {
+    IN a, b, c;
+    OUT out;
+
+    PARTS:
+    Or(a=a, b=b, out=aorb);
+    Or(a=c, b=b, out=corb);
+    And(a=aorb, b=corb, out=out);
+}
